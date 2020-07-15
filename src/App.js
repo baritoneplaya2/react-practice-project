@@ -60,6 +60,7 @@ class App extends Component {
     if (this.state.showPersons) {
       persons = (
         <div>
+          {this.state.persons}
           <Person
             name={this.state.persons[0].name}
             age={this.state.persons[0].age} />
