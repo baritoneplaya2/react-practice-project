@@ -63,6 +63,7 @@ class App extends Component {
       persons = (
         <div>
           {this.state.persons.map((person, index) => {
+            console.log(person);
             return <Person
               click={() => this.deletePersonHandler(index)}
               name={person.name}
@@ -73,11 +74,11 @@ class App extends Component {
         </div>
       );
 
-      style.backgroundColor = 'red';
-      style[':hover']: {
-        backgroundColor: 'salmon',
-        color: 'black'
-      }
+      // style.backgroundColor = 'red';
+      // style[':hover']: {
+      //   backgroundColor: 'salmon',
+      //   color: 'black'
+      // }
     }
 
     const classes = [];
