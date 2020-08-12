@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import classes from './Cockpit.css';
 
-const cockpit = (props) => {
+const Cockpit = (props) => {
+  const [name, setName] = React.useState('Maria');
+  console.log(name);
+  // componentDidMount (ish)
     useEffect(() => {
       console.log('[Cockpit.js] useEffect');
       // Http request...
@@ -15,13 +18,13 @@ const cockpit = (props) => {
     //[] will only pop up at the beginning
     //[props.persons] will pop up at the beginning and when a persons input is changed
 
+    // componentDidUpdate (ish)
     useEffect(() => {
       console.log('[Cockpit.js] 2nd useEffect');
       return () => {
         console.log('[Cockpit.js] cleanup work in 2nd useEffect');
       };
     });
-
 
     const assignedClasses = [];
     let btnClass = '';
@@ -47,4 +50,4 @@ const cockpit = (props) => {
     );
 };
 
-export default cockpit;
+export default Cockpit;
