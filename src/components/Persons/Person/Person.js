@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Aux from '../../../hoc/Aux';
+import withClass from '../../../hoc/withClass';
 import classes from './Person.css';
 
 // ES6 code
@@ -11,8 +12,8 @@ class Person extends Component {
             <Aux>
                 <p onClick={this.props.click}>
                     I'm {this.props.name} and I am {this.props.age} years old!
-                </p>,
-                <p key="i2">{this.props.children}</p>,
+                </p>
+                <p key="i2">{this.props.children}</p>
                 <input
                     key="i3"
                     type="text"
@@ -23,4 +24,4 @@ class Person extends Component {
     }
 };
 
-export default Person;
+export default withClass(Person, classes.Person);
