@@ -36,7 +36,7 @@ class Persons extends Component {
 
     render() {
         console.log('[Persons.js] rendering...');
-        return this.props.persons.map( (person, index) => {
+        return (this.props.persons.map((person, index) => {
             return (
                 <Person
                     click={() => this.props.clicked(index)}
@@ -46,7 +46,8 @@ class Persons extends Component {
                     changed={event => this.props.changed(event, person.id)}
                 />
             );
-        });
+        })
+        );
     }
 }
 
